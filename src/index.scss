@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-gradient {
+  @apply bg-gradient-to-r from-[#d946ef] to-[#8b5cf6];
+}
+
+body {
+  @apply bg-white text-black m-0;
+}
+
+.button {
+  @apply px-3 py-1 rounded flex gap-2 items-center;
+  &.button-outlined {
+    @apply border border-slate-500 text-slate-500 hover:bg-slate-700 hover:text-white;
+  }
+  &.button-filled {
+    @apply border border-slate-500 text-white hover:bg-slate-700  bg-slate-500;
+  }
+}
+
+.nav-bar {
+  @apply fixed md:static pt-10 md:pt-0 top-0 w-full bg-white md:bg-none z-10 md:w-60 shrink-0 grow-0 border-r border-slate-500 px-4 h-full transition-all duration-300 ease-out;
+}
+.navigation {
+  ul {
+    li {
+      @apply mt-2;
+      .nav-button {
+        @apply cursor-pointer outline-none flex gap-2 items-center w-full px-4 py-2 rounded relative text-slate-500;
+        &:hover,
+        &.active {
+          @apply bg-slate-500 text-white;
+          .nav-arrow {
+            @apply text-white;
+          }
+        }
+        .nav-arrow {
+          @apply text-xl text-slate-500 absolute top-1/2 -translate-y-1/2 right-2 transition-transform duration-150 ease-in;
+        }
+      }
+      li {
+        @apply ml-4;
+        .nav-arrow {
+          @apply scale-75;
+        }
+      }
+    }
+  }
+}
+
+.input {
+  @apply border-solid border-gray-300 border py-2 px-4 w-full rounded text-gray-700 mt-2 focus:border-gray-500;
+  outline: none !important;
+}
