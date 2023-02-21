@@ -39,3 +39,10 @@ Builds the app for production to the `build` folder.\
 ```sh
 npm run build
 ```
+
+### Using this credential for signing
+
+```sh
+username: admin
+password: admin
+```
